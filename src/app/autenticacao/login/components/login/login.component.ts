@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/material';
-import { MatSnackBar} from '@angular/material';
+import { Router } from '@angular/router';
+import { MatSnackBar} from '@angular/material/snack-bar';
+import { Login } from '../../models';
 
 @Component({
   selector: 'app-login',
@@ -34,7 +35,8 @@ export class LoginComponent implements OnInit {
           "Dados Inválidos" , " Erro", { duration : 5000 });
           return;
       }
-      alert(JSON.stringify(this.form.value));
+      const login: Login = this.form.value;
+      
 
     }
 
