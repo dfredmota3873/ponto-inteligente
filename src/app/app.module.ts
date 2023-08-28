@@ -3,8 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button';
-import { LoginModule, LoginRoutingModule } from './autenticacao';
+import { LoginModule, LoginRoutingModule, CadastroPjModule, CadastroPfModule,CadastroPfRoutingModule } from './autenticacao';
+import { CadastroPjRoutingModule } from './autenticacao/cadastro-pj/cadastro-pj-routing.module';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 @NgModule({
   declarations: [
@@ -13,9 +17,14 @@ import { LoginModule, LoginRoutingModule } from './autenticacao';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatButtonModule,
     LoginModule,
     LoginRoutingModule,
+    CadastroPjModule,
+    CadastroPjRoutingModule,
+    CadastroPfModule,
+    CadastroPfRoutingModule,
+    MatToolbarModule,
+    MatIconModule,
     AppRoutingModule
   ],
   providers: [],

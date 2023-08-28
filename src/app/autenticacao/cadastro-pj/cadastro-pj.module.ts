@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CadastrarPjComponent,CadastroPjComponent } from './components';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -9,17 +11,17 @@ import { MatListModule } from '@angular/material/list';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-
-
-
-import { FlexLayoutModule } from '@angular/flex-layout';
-
-import { LoginComponent, LogarComponent } from './components';
-import { LoginService } from './services';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { CadastroPjService } from './services';
 
 @NgModule({
+  declarations: [
+    CadastrarPjComponent,
+    CadastroPjComponent
+  ],
   imports: [
     CommonModule,
+    FlexLayoutModule,
     RouterModule,
     ReactiveFormsModule,
     HttpClientModule,
@@ -29,14 +31,10 @@ import { LoginService } from './services';
     MatTooltipModule,
     MatIconModule,
     MatSnackBarModule,
-    FlexLayoutModule
-  ],
-  declarations: [
-  	LoginComponent,
-  	LogarComponent
+    SharedModule
   ],
   providers:[
-    LoginService
+    CadastroPjService
   ]
 })
-export class LoginModule { }
+export class CadastroPjModule { }
