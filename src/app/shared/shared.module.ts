@@ -1,18 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MascaraDirective } from './directives/mascara.directive';
-import { CpfValidator } from './validators/cpf.validators';
+import { PtBrMatPaginatorIntl } from './pt-br-mat-paginator-intl';
+import { TipoPipe } from './pipes/tipo.pipe';
+import { DataPipe } from './pipes/data.pipe';
 
 
 @NgModule({
   declarations: [
-    MascaraDirective
+    MascaraDirective,
+    TipoPipe,
+    DataPipe
   ],
   imports: [
     CommonModule
   ]
   , exports:[
-    MascaraDirective
+    MascaraDirective,
+    TipoPipe,
+    DataPipe
+  ],
+  providers:[
+    PtBrMatPaginatorIntl
   ]
 })
 export class SharedModule { }
