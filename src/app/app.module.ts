@@ -9,6 +9,7 @@ import { CadastroPjRoutingModule } from './autenticacao/cadastro-pj/cadastro-pj-
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { AdminModule,AdminRoutingModule } from './admin';
 
 
 @NgModule({
@@ -28,6 +29,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatIconModule,
     FuncionarioModule,
     FuncionarioRoutingModule,
+    AdminModule,
+    AdminRoutingModule,
     AppRoutingModule
   ],
   providers: [],
